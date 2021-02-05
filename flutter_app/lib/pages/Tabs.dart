@@ -90,11 +90,16 @@ class _TabsState extends State<Tabs> {
           ListTile(
             leading: CircleAvatar(child: Icon(Icons.home)),
             title: Text('我的空间'),
+            
           ),
           Divider(),
           ListTile(
             leading: CircleAvatar(child: Icon(Icons.people)),
             title: Text('用户中心'),
+            onTap: (){
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/user');
+            },
           ),
           Divider(),
           ListTile(

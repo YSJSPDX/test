@@ -10,6 +10,7 @@ import '../pages/user/RegisterSecond.dart';
 import '../pages/user/RegisterThird.dart';
 import '../pages/AppBarDemo.dart';
 import '../pages/TabBarController.dart';
+import '../pages/User.dart';
 
 //配置路由
 final routes = {
@@ -24,6 +25,7 @@ final routes = {
   '/registerthird': (context) => RegisterThirdPage(),
   '/appbardemo': (context) => AppBarDemoPage(),
   '/tabbarcontroller': (context) => TabBarControllerPage(),
+  '/user':(context) => UserPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
