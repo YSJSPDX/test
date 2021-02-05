@@ -88,13 +88,16 @@ class _TabsState extends State<Tabs> {
             ],
           ),
           ListTile(
-            leading: CircleAvatar(child: Icon(Icons.home)),
+            leading: CircleAvatar(
+              child: Icon(Icons.home)
+              ),
             title: Text('我的空间'),
-            
           ),
           Divider(),
           ListTile(
-            leading: CircleAvatar(child: Icon(Icons.people)),
+            leading: CircleAvatar(
+              child: Icon(Icons.people)
+              ),
             title: Text('用户中心'),
             onTap: (){
               Navigator.of(context).pop();
@@ -107,7 +110,8 @@ class _TabsState extends State<Tabs> {
             title: Text('设置中心'),
           ),
         ],
-      )),
+      )
+      ),
       endDrawer: Drawer(child: Text('右侧侧边栏')),
     );
   }
