@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/tabs/Issue.dart';
 import 'tabs/Home.dart';
 import 'tabs/Message.dart';
 import 'tabs/People.dart';
@@ -21,6 +22,7 @@ class _TabsState extends State<Tabs> {
   List _pageList = [
     HomePage(),
     MessagePage(),
+    IssuePage(),
     Collections(),
     PeoplePage(),
   ];
@@ -31,6 +33,28 @@ class _TabsState extends State<Tabs> {
       appBar: AppBar(
         title: Text('智租'),
       ),
+      floatingActionButton: Container(
+        height: 80,
+        width: 80,
+        padding: EdgeInsets.all(8),
+        margin: EdgeInsets.only(top:10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white,
+        ),
+         
+        child: FloatingActionButton(
+          child: Icon(Icons.add, color: Colors.black, size: 24),
+          onPressed: () {
+            setState(() {
+            this._currentIndex = 2;
+          });
+            print("floatingActionButton tabs");
+          },
+          backgroundColor: this._currentIndex==2?Colors.red:Colors.yellow,
+        ),
+      ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
@@ -50,6 +74,10 @@ class _TabsState extends State<Tabs> {
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
              title: Text('消息')
+             ),
+             BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+             title: Text('发布')
              ),
           BottomNavigationBarItem(
               icon: Icon(Icons.collections), 

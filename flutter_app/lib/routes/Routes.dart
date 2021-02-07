@@ -11,6 +11,7 @@ import '../pages/user/RegisterThird.dart';
 import '../pages/AppBarDemo.dart';
 import '../pages/TabBarController.dart';
 import '../pages/User.dart';
+import '../pages/Button.dart';
 
 //配置路由
 final routes = {
@@ -26,6 +27,7 @@ final routes = {
   '/appbardemo': (context) => AppBarDemoPage(),
   '/tabbarcontroller': (context) => TabBarControllerPage(),
   '/user':(context) => UserPage(),
+  '/button':(context) => ButtonDemoPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
