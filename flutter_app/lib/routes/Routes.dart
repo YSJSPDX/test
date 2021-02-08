@@ -12,6 +12,10 @@ import '../pages/AppBarDemo.dart';
 import '../pages/TabBarController.dart';
 import '../pages/User.dart';
 import '../pages/Button.dart';
+import '../pages/CheckBox.dart';
+import '../pages/Radio.dart';
+import '../pages/TextField.dart';
+import '../pages/FormDemo.dart';
 
 //配置路由
 final routes = {
@@ -28,6 +32,10 @@ final routes = {
   '/tabbarcontroller': (context) => TabBarControllerPage(),
   '/user':(context) => UserPage(),
   '/button':(context) => ButtonDemoPage(),
+  '/radio':(context) => RadioDemo(),
+  '/textfield':(context) => TextFieldDemo(),
+  '/checkbox':(context) => CheckBoxDemo(),
+  '/formdemo':(context) => FormDemoPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {

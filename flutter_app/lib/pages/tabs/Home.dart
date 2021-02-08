@@ -11,7 +11,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return  Center(
+    return  ListView(
+      children:<Widget> [
+        Container(
+          child: Center(
       child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme:ButtonTextTheme.primary
         ),
-        SizedBox(height:20),
+        SizedBox(height:10),
         RaisedButton(
           child:Text('跳转到商品页面'),
           onPressed:(){
@@ -41,7 +44,7 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme:ButtonTextTheme.primary
         ),
-        SizedBox(height:20),
+        SizedBox(height:10),
         RaisedButton(
           child:Text('跳转到appBar'),
           onPressed:(){
@@ -50,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme:ButtonTextTheme.primary
         ),
-        SizedBox(height:20),
+        SizedBox(height:10),
          RaisedButton(
           child:Text('TabBarController定义顶部tab切换'),
           onPressed:(){
@@ -59,7 +62,7 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme:ButtonTextTheme.primary
         ),
-        SizedBox(height:20),
+        SizedBox(height:10),
          RaisedButton(
           child:Text('跳转到按钮演示界面'),
           onPressed:(){
@@ -68,9 +71,48 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme:ButtonTextTheme.primary
         ),
-        
+        SizedBox(height:10),
+         RaisedButton(
+          child:Text('跳转到表单演示界面'),
+          onPressed:(){
+            Navigator.pushNamed(context, '/textfield');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme:ButtonTextTheme.primary
+        ),
+        SizedBox(height:10),
+         RaisedButton(
+          child:Text('raido'),
+          onPressed:(){
+            Navigator.pushNamed(context, '/radio');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme:ButtonTextTheme.primary
+        ),
+        SizedBox(height:10),
+         RaisedButton(
+          child:Text('checkbox'),
+          onPressed:(){
+            Navigator.pushNamed(context, '/checkbox');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme:ButtonTextTheme.primary
+        ),
+        SizedBox(height:10),
+         RaisedButton(
+          child:Text('学员登记系统'),
+          onPressed:(){
+            Navigator.pushNamed(context, '/formdemo');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme:ButtonTextTheme.primary
+        ),
+         SizedBox(height:100),
       ],
       ),
+    ),
+        )
+      ],
     );
   }
 }
